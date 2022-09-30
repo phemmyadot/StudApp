@@ -31,15 +31,6 @@ namespace StudApp.PageModels
         {
             base.Init(initData);
 
-            authenticator = new OAuth2Authenticator(
-            clientId: AuthHelpers.Constants.AndroidClientId,
-            clientSecret: null,
-            scope: AuthHelpers.Constants.Scope,
-            authorizeUrl: new Uri(AuthHelpers.Constants.AuthorizeUrl),
-             redirectUrl: new Uri(AuthHelpers.Constants.AndroidRedirectUrl),
-            accessTokenUrl: new Uri(AuthHelpers.Constants.AccessTokenUrl),
-             getUsernameAsync: null,
-           isUsingNativeUI: true);
 
         }
 
@@ -67,11 +58,20 @@ namespace StudApp.PageModels
                 return new Command(() =>
                 {
 
+                    authenticator = new OAuth2Authenticator(
+                    clientId: AuthHelpers.Constants.AndroidClientId,
+                    clientSecret: null,
+                    scope: AuthHelpers.Constants.Scope,
+                    authorizeUrl: new Uri(AuthHelpers.Constants.AuthorizeUrl),
+                    redirectUrl: new Uri(AuthHelpers.Constants.AndroidRedirectUrl),
+                    accessTokenUrl: new Uri(AuthHelpers.Constants.AccessTokenUrl),
+                    getUsernameAsync: null,
+                    isUsingNativeUI: true);
+
                     authenticator.Completed += OnAuthCompleted;
                     authenticator.Error += OnAuthError;
                     authenticator.IsLoadableRedirectUri = true;
                     AuthenticationState.Authenticator = authenticator;
-
 
                     OAuthLoginPresenter presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
                     presenter.Login(authenticator);
@@ -82,7 +82,7 @@ namespace StudApp.PageModels
 
         async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
         {
-            //IsLoading = true;
+            IsLoading = true;
             OAuth2Authenticator authenticator = sender as OAuth2Authenticator;
             if (authenticator != null)
             {
@@ -121,6 +121,10 @@ namespace StudApp.PageModels
                 {
                     await SecureStorage.SetAsync("token", "");
                 }
+            }
+            else
+            {
+                await SecureStorage.SetAsync("token", "");
             }
             IsLoading = false;
         }

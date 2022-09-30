@@ -31,7 +31,7 @@
   <permission android:name="com.eminent.studentapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.eminent.studentapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:label="StudApp.Android" android:theme="@style/MainTheme">
-    <activity android:name="crc64301dd61589194418.CustomUrlSchemeInterceptorActivity" android:label="CustomUrlSchemeInterceptorActivity" android:launchMode="singleTop">
+    <activity android:name="crc64301dd61589194418.CustomUrlSchemeInterceptorActivity" android:label="CustomUrlSchemeInterceptorActivity">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />

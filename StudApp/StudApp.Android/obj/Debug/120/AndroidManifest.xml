@@ -11,7 +11,7 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <application android:label="StudApp.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">
-    <activity android:label="CustomUrlSchemeInterceptorActivity" android:launchMode="singleTop" android:name="crc64301dd61589194418.CustomUrlSchemeInterceptorActivity">
+    <activity android:label="CustomUrlSchemeInterceptorActivity" android:name="crc64301dd61589194418.CustomUrlSchemeInterceptorActivity">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />

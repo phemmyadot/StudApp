@@ -14,7 +14,7 @@ using Xamarin.Auth;
 
 namespace StudApp.Droid
 {
-    [Activity(Label = "CustomUrlSchemeInterceptorActivity", LaunchMode = LaunchMode.SingleTop)]
+    [Activity(Label = "CustomUrlSchemeInterceptorActivity")]
     [IntentFilter(
         new[] { Intent.ActionView },
         Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
