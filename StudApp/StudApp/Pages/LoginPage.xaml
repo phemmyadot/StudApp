@@ -1,15 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudApp.Pages.LoginPage" Title="LoginPage" NavigationPage.HasNavigationBar="False"  BackgroundColor="{StaticResource PageBackgroundColor}">
+<ContentPage
+    x:Class="StudApp.Pages.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPage"
+    BackgroundColor="{StaticResource PageBackgroundColor}"
+    NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical"
-                     VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand">
-            <Button Text="Login"  Style="{StaticResource PrimaryButtonStyle}"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="FillAndExpand"
-                    Command="{Binding Login_User}"/>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Vertical"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                Margin="0,0,0,50"
+                FontSize="24"
+                HorizontalOptions="Center"
+                Style="{StaticResource MediumLabelStyle}"
+                Text="Authenticate with Google"
+                VerticalOptions="Center" />
+            <Button
+                Command="{Binding Login_User}"
+                HorizontalOptions="FillAndExpand"
+                Style="{StaticResource PrimaryButtonStyle}"
+                Text="Login"
+                VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

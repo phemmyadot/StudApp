@@ -20,7 +20,7 @@ namespace StudApp.PageModels
         private async Task ValidateAuth()
         {
             await Task.Delay(3000);
-            if (MainPageLabel.Length > 10)
+            if (MainPageLabel.Length < 10)
             {
                 await CoreMethods.PushPageModel<DashboardPageModel>();
             }

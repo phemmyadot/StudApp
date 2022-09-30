@@ -8,6 +8,7 @@ namespace StudApp.Pages
         public MainPage()
         {
             InitializeComponent();
+
         }
     }
 }
