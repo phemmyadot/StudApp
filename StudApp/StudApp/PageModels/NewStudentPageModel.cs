@@ -27,17 +27,13 @@ namespace StudApp.PageModels
                 OnPropertyChanged();
             }
         }
-
-        public string ButtonText { get => buttonText; set => buttonText = value; }
+        private string _buttonText;
+        private string _pageTitle;
+        public string ButtonText { get => _buttonText; set => _buttonText = value; }
+        public string PageTitle { get => _pageTitle; set => _pageTitle = value; }
 
         public bool IsEdit = false;
-        private string buttonText = "Add";
 
-        public NewStudentPageModel()
-        {
-
-
-        }
 
         public override void Init(object initData)
         {
@@ -48,7 +44,7 @@ namespace StudApp.PageModels
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            
+
         }
         public override void ReverseInit(object returnedData)
         {
@@ -61,6 +57,7 @@ namespace StudApp.PageModels
         {
             IsEdit = StudentId != null;
             ButtonText = IsEdit ? "Edit" : "Add";
+            PageTitle = IsEdit ? "Edit Student" : "Add new student";
             if (IsEdit)
             {
                 Task<Student> getStudent = _service.GetStudent(StudentId);
