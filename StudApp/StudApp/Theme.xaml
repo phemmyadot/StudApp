@@ -1,0 +1,20 @@
+﻿<ResourceDictionary
+    x:Class="StudApp.Theme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--  Blue  -->
+    <Color x:Key="PrimaryColor">#097BD6</Color>
+    <!--  White  -->
+    <Color x:Key="PageBackgroundColor">#E6F2FB</Color>
+    <!--  Dark Grey  -->
+    <Color x:Key="PrimaryTextColor">#121212</Color>
+    <!--  Mid Grey  -->
+    <Color x:Key="SecondaryTextColor">#FFFFFF</Color>
+    <!--  Mid-Light Grey  -->
+    <Color x:Key="SubTextColor">#96BADD</Color>
+    <!--  Transperant Black  -->
+    <Color x:Key="TransperantBackgroundColor">#56000000</Color>
+    <!--  Silver Light Grey  -->
+    <Color x:Key="SeparatorLineColor">#C4C4C4</Color>
+</ResourceDictionary>

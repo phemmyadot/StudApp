@@ -1,0 +1,147 @@
+﻿<fresh:FreshBaseContentPage
+    x:Class="StudApp.Pages.DashboardPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshMvvm"
+    xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    Title="Dashboard"
+    BackgroundColor="{StaticResource PageBackgroundColor}"
+    NavigationPage.HasBackButton="False">
+    <fresh:FreshBaseContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding onClickAdd}" Text="Add" />
+        <ToolbarItem Text="" />
+    </fresh:FreshBaseContentPage.ToolbarItems>
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Frame
+                Margin="30,20,30,10"
+                Padding="4"
+                BackgroundColor="{StaticResource SubTextColor}"
+                CornerRadius="10"
+                HasShadow="True">
+                <SearchBar
+                    x:Name="filterText"
+                    Grid.Row="0"
+                    BackgroundColor="{StaticResource SubTextColor}"
+                    CancelButtonColor="{StaticResource PrimaryTextColor}"
+                    FontAttributes="Italic"
+                    FontSize="Small"
+                    HeightRequest="40"
+                    Placeholder="Search students"
+                    PlaceholderColor="{StaticResource PrimaryTextColor}"
+                    SearchCommand="{Binding OnFilterTextChanged}"
+                    TextChanged="OnFilterTextChanged"
+                    TextColor="{StaticResource PrimaryTextColor}" />
+            </Frame>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="editButton"
+                    Grid.Column="1"
+                    Command="{Binding EditStudent}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Edit"
+                    VerticalOptions="Center" />
+                <Button
+                    x:Name="deleteButton"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Command="{Binding DeleteStudent}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Delete"
+                    VerticalOptions="Center" />
+            </Grid>
+            <syncfusion:SfListView
+                x:Name="listView"
+                Grid.Row="2"
+                Margin="10"
+                AutoFitMode="Height"
+                ItemSpacing="1"
+                ItemsSource="{Binding Students}"
+                SelectedItem="{Binding SelectedStudent}"
+                SelectionBackgroundColor="{StaticResource PrimaryColor}"
+                SelectionMode="SingleDeselect">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="0">
+                                    <Frame
+                                        x:Name="frame"
+                                        Margin="20,5"
+                                        Padding="0"
+                                        BackgroundColor="White"
+                                        CornerRadius="5"
+                                        HasShadow="True"
+                                        OutlineColor="White">
+                                        <Grid RowSpacing="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="70" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image
+                                                Aspect="AspectFit"
+                                                HeightRequest="95"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"
+                                                WidthRequest="95">
+                                                <Image.Source>
+                                                    <UriImageSource
+                                                        CacheValidity="1"
+                                                        CachingEnabled="true"
+                                                        Uri="{Binding StudentImage}" />
+                                                </Image.Source>
+                                            </Image>
+
+                                            <Grid
+                                                Grid.Column="1"
+                                                Padding="10,0,0,0"
+                                                RowSpacing="1"
+                                                VerticalOptions="Center">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="20" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Label
+                                                    FontAttributes="Bold"
+                                                    FontSize="16"
+                                                    Text="{Binding fullName}"
+                                                    TextColor="{StaticResource PrimaryTextColor}" />
+                                                <Label
+                                                    Grid.Row="1"
+                                                    Grid.Column="0"
+                                                    Text="{Binding genderString}"
+                                                    TextColor="{StaticResource PrimaryTextColor}" />
+                                            </Grid>
+                                        </Grid>
+
+                                    </Frame>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+
+        </Grid>
+    </StackLayout>
+</fresh:FreshBaseContentPage>
