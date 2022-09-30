@@ -10,7 +10,7 @@ namespace StudApp
         public App()
         {
 
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(AppConstant.Constants.SyncfusionLicense);
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(AuthHelpers.Constants.SyncfusionLicense);
             InitializeComponent();
 
             Page page = FreshPageModelResolver.ResolvePageModel<MainPageModel>();

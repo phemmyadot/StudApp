@@ -1,4 +1,5 @@
-﻿using StudApp.Models;
+﻿using StudApp.AuthHelpers;
+using StudApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,7 +32,7 @@ namespace StudApp.Services
         {
             try
             {
-                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student", string.Empty));
+                Uri uri = new Uri(string.Format(Constants.baseUrl + "Student", string.Empty));
                 string json = JsonSerializer.Serialize<Student>(student, serializerOptions);
 
 
@@ -62,7 +63,7 @@ namespace StudApp.Services
         {
             try
             {
-                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student/"+ student.id, string.Empty));
+                Uri uri = new Uri(string.Format(Constants.baseUrl + "Student/"+ student.id, string.Empty));
                 string json = JsonSerializer.Serialize<Student>(student, serializerOptions);
 
 
@@ -92,7 +93,7 @@ namespace StudApp.Services
         {
             try
             {
-                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student/" + studentId, string.Empty));
+                Uri uri = new Uri(string.Format(Constants.baseUrl + "Student/" + studentId, string.Empty));
 
 
 
@@ -122,7 +123,7 @@ namespace StudApp.Services
             List<Student> Students = new List<Student>();
             try
             {
-                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student", string.Empty));
+                Uri uri = new Uri(string.Format(Constants.baseUrl + "Student", string.Empty));
                 HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
                 response.EnsureSuccessStatusCode();
 
@@ -151,7 +152,7 @@ namespace StudApp.Services
             Student Student = new Student();
             try
             {
-                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student/"+studentId, string.Empty));
+                Uri uri = new Uri(string.Format(Constants.baseUrl + "Student/"+studentId, string.Empty));
                 HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
                 response.EnsureSuccessStatusCode();
 

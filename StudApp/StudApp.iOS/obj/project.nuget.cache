@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yNXRXLoixMRm69uq72duRo0HgoE1WwUnPh3Wk97qBCM9iKsuC0KThPyIbqiCk8BBnW0pQ+sOwpKPlAMyOGAbfQ==",
+  "dgSpecHash": "ZxKvpVq/GCbo+LRrXS4BwTHnUl/4uaUv4yglla635PxR8LiOYK9WGDxzvh7x6xQzjUQEhr1ijsUbl0XzZfv/EA==",
   "success": true,
   "projectFilePath": "C:\\sandbox\\StudApp\\StudApp\\StudApp.iOS\\StudApp.iOS.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.core\\20.3.0.47\\syncfusion.xamarin.core.20.3.0.47.nupkg.sha512",
     "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.datasource\\20.3.0.47\\syncfusion.xamarin.datasource.20.3.0.47.nupkg.sha512",
     "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\20.3.0.47\\syncfusion.xamarin.gridcommon.20.3.0.47.nupkg.sha512",
+    "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\20.3.0.47\\syncfusion.xamarin.sfbusyindicator.20.3.0.47.nupkg.sha512",
     "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.sflistview\\20.3.0.47\\syncfusion.xamarin.sflistview.20.3.0.47.nupkg.sha512",
     "C:\\Users\\New\\.nuget\\packages\\syncfusion.xamarin.sfpopuplayout\\20.3.0.47\\syncfusion.xamarin.sfpopuplayout.20.3.0.47.nupkg.sha512",
     "C:\\Users\\New\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

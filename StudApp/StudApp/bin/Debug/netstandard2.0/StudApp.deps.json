@@ -13,6 +13,7 @@
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.2-beta2",
           "Syncfusion.Xamarin.Core": "20.3.0.47",
+          "Syncfusion.Xamarin.SfBusyIndicator": "20.3.0.47",
           "Syncfusion.Xamarin.SfListView": "20.3.0.47",
           "Syncfusion.Xamarin.SfPopupLayout": "20.3.0.47",
           "System.Text.Json": "6.0.6",
@@ -97,6 +98,18 @@
       "Syncfusion.Xamarin.GridCommon/20.3.0.47": {
         "runtime": {
           "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {
+            "assemblyVersion": "20.3451.0.47",
+            "fileVersion": "20.3451.0.47"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator/20.3.0.47": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.3.0.47",
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {
             "assemblyVersion": "20.3451.0.47",
             "fileVersion": "20.3451.0.47"
           }
@@ -347,6 +360,13 @@
       "sha512": "sha512-yslr9O2R2tUSAVPS5yvUKxAeNVy41jgBT3kLd2Aj02nf2kz6uhjkvjCtFUjkc5hQtzZ8lJcQmbRm0niNsBrk/A==",
       "path": "syncfusion.xamarin.gridcommon/20.3.0.47",
       "hashPath": "syncfusion.xamarin.gridcommon.20.3.0.47.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfBusyIndicator/20.3.0.47": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dThesElYd7JgIREz33xCrX9560c/6+UlkwGsjqAmnEFnBuM/0GkWH2ApZJ8uFGjVUy4LejeXmIRGTLGQA+iz7Q==",
+      "path": "syncfusion.xamarin.sfbusyindicator/20.3.0.47",
+      "hashPath": "syncfusion.xamarin.sfbusyindicator.20.3.0.47.nupkg.sha512"
     },
     "Syncfusion.Xamarin.SfListView/20.3.0.47": {
       "type": "package",

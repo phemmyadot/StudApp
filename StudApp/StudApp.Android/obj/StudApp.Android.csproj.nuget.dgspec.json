@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[20.3.0.47, )"
             },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
+              "target": "Package",
+              "version": "[20.3.0.47, )"
+            },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
               "version": "[20.3.0.47, )"
@@ -142,6 +146,10 @@
               "version": "[13.0.2-beta2, )"
             },
             "Syncfusion.Xamarin.Core": {
+              "target": "Package",
+              "version": "[20.3.0.47, )"
+            },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
               "version": "[20.3.0.47, )"
             },

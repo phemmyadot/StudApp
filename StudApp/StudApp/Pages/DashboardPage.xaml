@@ -8,7 +8,7 @@
     BackgroundColor="{StaticResource PageBackgroundColor}"
     NavigationPage.HasBackButton="False">
     <fresh:FreshBaseContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding onClickAdd}" Text="Add" />
+        <ToolbarItem Command="{Binding OnLogout}" Text="Logout" />
         <ToolbarItem Text="" />
     </fresh:FreshBaseContentPage.ToolbarItems>
     <StackLayout>
@@ -63,6 +63,22 @@
                     IsEnabled="{Binding IsEnabled}"
                     Style="{StaticResource PrimaryButtonStyle}"
                     Text="Delete"
+                    VerticalOptions="Center" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="addButton"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="30,0,0,0"
+                    Command="{Binding onClickAdd}"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Add"
                     VerticalOptions="Center" />
             </Grid>
             <syncfusion:SfListView

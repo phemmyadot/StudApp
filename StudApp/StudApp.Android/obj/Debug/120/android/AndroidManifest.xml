@@ -5,12 +5,11 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.eminent.studentapp" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.eminent.studentapp" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
+  <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
   <queries>
     <intent>
       <action android:name="android.intent.action.VIEW" />
@@ -31,24 +30,20 @@
   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
   <permission android:name="com.eminent.studentapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.eminent.studentapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/icon" android:label="StudApp.Android" android:theme="@style/MainTheme" android:usesCleartextTraffic="true">
-    <activity android:name="crc64301dd61589194418.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:icon="@mipmap/icon" android:label="StudentApp" android:theme="@style/MainTheme">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-      <!-- SEND INTENT FILTER -->
-      <intent-filter>
-        <action android:name="android.intent.action.SEND" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <data android:mimeType="text/plain" />
-      </intent-filter>
-      <!-- VIEW INTENT FILTER -->
+  <application android:name="android.app.Application" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:label="StudApp.Android" android:theme="@style/MainTheme">
+    <activity android:name="crc64301dd61589194418.CustomUrlSchemeInterceptorActivity" android:label="CustomUrlSchemeInterceptorActivity" android:launchMode="singleTop">
       <intent-filter>
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="http" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="com.googleusercontent.apps.423567803684-n4n5852itf2pgoe3iidr60so7gq7n8nh" />
+      </intent-filter>
+    </activity>
+    <activity android:name="crc64301dd61589194418.MainActivity" android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:icon="@mipmap/icon" android:label="StudApp" android:theme="@style/MainTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />

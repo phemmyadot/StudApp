@@ -1,7 +1,7 @@
 ﻿using FreshMvvm;
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace StudApp.PageModels
 {
@@ -20,13 +20,14 @@ namespace StudApp.PageModels
         private async Task ValidateAuth()
         {
             await Task.Delay(3000);
-            if (MainPageLabel.Length < 10)
+            string token = await SecureStorage.GetAsync("token");
+            if (token == null || token == "")
             {
-                await CoreMethods.PushPageModel<DashboardPageModel>();
+                await CoreMethods.PushPageModel<LoginPageModel>();
             }
             else
             {
-                await CoreMethods.PushPageModel<LoginPageModel>();
+                await CoreMethods.PushPageModel<DashboardPageModel>();
             }
         }
 

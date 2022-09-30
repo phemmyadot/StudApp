@@ -126,6 +126,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Core">
       <Version>20.3.0.47</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator">
+      <Version>20.3.0.47</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
       <Version>20.3.0.47</Version>
     </PackageReference>

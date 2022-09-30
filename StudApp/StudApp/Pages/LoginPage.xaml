@@ -3,24 +3,44 @@
     x:Class="StudApp.Pages.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+    xmlns:local="clr-namespace:Syncfusion.ListView.XForms.Helpers;assembly=Syncfusion.SfListView.XForms"
     Title="LoginPage"
     BackgroundColor="{StaticResource PageBackgroundColor}"
     NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseBoolConverter x:Key="inverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout
             HorizontalOptions="CenterAndExpand"
             Orientation="Vertical"
             VerticalOptions="CenterAndExpand">
+            <Frame BackgroundColor="Transparent" IsVisible="{Binding IsLoading}">
+                <busyindicator:SfBusyIndicator
+                    x:Name="busyindicator"
+                    Title="Loading..."
+                    AnimationType="Ball"
+                    TextColor="{StaticResource PrimaryColor}"
+                    TitlePlacement="None"
+                    ViewBoxHeight="150"
+                    ViewBoxWidth="150" />
+            </Frame>
+
             <Label
                 Margin="0,0,0,50"
                 FontSize="24"
                 HorizontalOptions="Center"
+                IsVisible="{Binding IsLoading, Converter={StaticResource inverter}}"
                 Style="{StaticResource MediumLabelStyle}"
                 Text="Authenticate with Google"
                 VerticalOptions="Center" />
             <Button
                 Command="{Binding Login_User}"
                 HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsLoading, Converter={StaticResource inverter}}"
                 Style="{StaticResource PrimaryButtonStyle}"
                 Text="Login"
                 VerticalOptions="Center" />

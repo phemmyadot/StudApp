@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace StudApp.PageModels
@@ -83,6 +84,18 @@ namespace StudApp.PageModels
                 return new Command(async () =>
                 {
                     await CoreMethods.PushPageModel<NewStudentPageModel>();
+                });
+            }
+        }
+        public Command OnLogout
+        {
+            get
+            {
+
+                return new Command(async () =>
+                {
+                    await SecureStorage.SetAsync("token", "");
+                    await CoreMethods.PushPageModel<LoginPageModel>();
                 });
             }
         }
