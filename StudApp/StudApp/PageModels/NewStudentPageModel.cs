@@ -2,10 +2,10 @@
 using StudApp.Models;
 using StudApp.Services;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace StudApp.PageModels
@@ -14,6 +14,7 @@ namespace StudApp.PageModels
     {
         private StudentService _service = FreshIOC.Container.Resolve<StudentService>();
         private Student _student;
+        public string StudentId;
         public Student Student
         {
             get
@@ -26,27 +27,74 @@ namespace StudApp.PageModels
                 OnPropertyChanged();
             }
         }
+
+        public string ButtonText { get => buttonText; set => buttonText = value; }
+
+        public bool IsEdit = false;
+        private string buttonText = "Add";
+
         public NewStudentPageModel()
         {
 
-            Student = new Student()
-            {
-                id = Guid.NewGuid().ToString(),
-                gender = 0,
-                dateOfBirth = DateTime.UtcNow.ToString("s") + "Z",
-            };
+
         }
-       
+
+        public override void Init(object initData)
+        {
+            base.Init(initData);
+            getStudent();
+
+        }
+
+        protected override void ViewIsAppearing(object sender, EventArgs e)
+        {
+            
+        }
+        public override void ReverseInit(object returnedData)
+        {
+            getStudent();
+            base.ReverseInit(returnedData);
+        }
+
+
+        public void getStudent()
+        {
+            IsEdit = StudentId != null;
+            ButtonText = IsEdit ? "Edit" : "Add";
+            if (IsEdit)
+            {
+                Task<Student> getStudent = _service.GetStudent(StudentId);
+                getStudent.Wait();
+                Student = getStudent.Result;
+            }
+            else
+            {
+                Student = new Student()
+                {
+                    id = StudentId ?? Guid.NewGuid().ToString(),
+                    gender = 0,
+                    dateOfBirth = DateTime.UtcNow.ToString("s") + "Z",
+                };
+            }
+
+            Debug.Write(Student.firstName);
+        }
         public Command SaveCommand
         {
             get
             {
-                return new Command(async () =>{
-                    await _service.AddNewStudent(Student);
+                return new Command(async () =>
+                {
+                    if (IsEdit)
+                    {
+                        await _service.UpdateStudent(Student);
+                    }
+                    else
+                    {
+                        await _service.AddNewStudent(Student);
+                    }
                     await CoreMethods.PopPageModel();
-                }
-                   
-                );
+                });
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;

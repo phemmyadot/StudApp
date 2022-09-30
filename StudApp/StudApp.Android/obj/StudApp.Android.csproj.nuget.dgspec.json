@@ -68,7 +68,7 @@
             },
             "Xamarin.AndroidX.Work.Runtime": {
               "target": "Package",
-              "version": "[2.7.1.4, )"
+              "version": "[2.7.0, )"
             },
             "Xamarin.Auth": {
               "target": "Package",

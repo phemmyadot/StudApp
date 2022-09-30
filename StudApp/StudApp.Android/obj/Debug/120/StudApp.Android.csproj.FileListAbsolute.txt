@@ -7,7 +7,6 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\stamp\_BuildLibraryImpo
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\res.flag
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\stamp\_AndroidXJetifyEmbeddedFiles.stamp
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\_AndroidXJetifyEmbeddedFiles.jetify
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\78\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\79\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\99\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\100\jl\files.cache
@@ -19,8 +18,6 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\108\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\109\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\116\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\117\jl\files.cache
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\118\jl\files.cache
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\119\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\R.txt
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\R.cs.flag
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\StudApp.Android.csproj.CoreCompileInputs.cache
@@ -319,7 +316,6 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\fr
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\lifecycle\livedata\core\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\lifecycle\livedata\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\lifecycle\runtime\R.java
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\lifecycle\service\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\lifecycle\viewmodel\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\media\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\navigation\common\R.java
@@ -329,11 +325,8 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\pr
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\recyclerview\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\room\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\savedstate\R.java
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\sqlite\db\framework\R.java
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\sqlite\db\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\startup\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\swiperefreshlayout\R.java
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\tracing\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\transition\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\viewpager2\R.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\androidx\work\R.java
@@ -743,7 +736,6 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\103\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\110\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\111\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\120\jl\files.cache
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\121\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Microsoft.CSharp.dll
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Microsoft.CSharp.pdb
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Syncfusion.Core.XForms.Android.dll
@@ -801,16 +793,6 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\112\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\lp\122\jl\files.cache
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Syncfusion.SfPopupLayout.XForms.Android.dll
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Syncfusion.SfPopupLayout.XForms.dll
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\410057c9-6889-4b78-a9f2-f85ef633bcf9.jar
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\72c85522-142c-4ef6-babe-9af148e38f90.jar
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\8b223142-921b-4a3b-a2ad-6c175e25f626.jar
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\af8d4def-352a-4ed8-9e83-c8cfbd6b6764.jar
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\4754aed3-4507-4e47-9307-adc0522dcbda.cfg
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\900d7bbf-10c9-422d-aecf-adc3037552ac.txt
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\a621f855-10cd-4b7a-8120-f445f4af3801.txt
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\ba15d03a-2d57-4a94-af2a-60ef68709d3a.txt
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\bf51d70b-753a-409e-94fe-59e92115fa8a.txt
-C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\e751bc15-a197-4736-b035-58d8f003d7d6.txt
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\CloseButtonFrame.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\MaterialPopupRenderer.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\PopupFooter.java
@@ -820,3 +802,14 @@ C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\SfPopupLayout.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\SfPopupRenderer.java
 C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\src\crc6466d27d713c291f37\VisualContainer.java
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\007a02f2-2707-45a5-8514-f71435ab5716.jar
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\58c1244f-fd66-455e-9401-7f43b17c2f21.jar
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\5d8e2407-bb8c-4954-8e25-8ce8b1020528.jar
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\jl\7dcede18-4583-4369-9ea1-9bfbef04c65b.jar
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\5c1562e1-624d-4ec7-a56e-5f19b3c223ec.txt
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\63cd62b2-eee1-4bb9-bffa-793e8c18bc02.txt
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\955d24cc-f105-435b-80a4-df0d6bcd7534.txt
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\c3d79112-3be5-41fc-a1e5-43b7d9786900.txt
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\e46921b5-d200-40ec-9a70-995c9546904b.txt
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\androidx\proguard\fa4ae999-a76f-4a75-bd2b-111574da503d.cfg
+C:\sandbox\StudApp\StudApp\StudApp.Android\obj\Debug\120\android\assets\Xamarin.Auth.pdb

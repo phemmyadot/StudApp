@@ -76,11 +76,12 @@
                     Text="{Binding Student.comment, Mode=TwoWay}"
                     TextColor="{StaticResource PrimaryTextColor}" />
             </inputLayout:SfTextInputLayout>
+
             <Button
                 Command="{Binding SaveCommand}"
                 HorizontalOptions="FillAndExpand"
                 Style="{StaticResource PrimaryButtonStyle}"
-                Text="Add"
+                Text="{Binding ButtonText}"
                 VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>

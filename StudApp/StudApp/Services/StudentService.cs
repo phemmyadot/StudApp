@@ -57,6 +57,37 @@ namespace StudApp.Services
             }
 
         }
+
+        public async Task UpdateStudent(Student student)
+        {
+            try
+            {
+                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student/"+ student.id, string.Empty));
+                string json = JsonSerializer.Serialize<Student>(student, serializerOptions);
+
+
+
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = null;
+
+                response = await client.PutAsync(uri, content);
+                response.EnsureSuccessStatusCode();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine("Student successfully updated.");
+                }
+                else
+                {
+                    Debug.WriteLine("Error updateing student");
+                }
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Failed to update student: {student.firstName}. Error: {ex.Message}";
+            }
+
+        }
         public async Task DeleteStudent(string studentId)
         {
             try
@@ -112,6 +143,35 @@ namespace StudApp.Services
                 StatusMessage = $"{e.Message}";
                 Debug.WriteLine(StatusMessage);
                 return Students;
+            }
+
+        }
+        public async Task<Student> GetStudent(string studentId)
+        {
+            Student Student = new Student();
+            try
+            {
+                Uri uri = new Uri(string.Format(AppConstant.Constants.baseUrl + "Student/"+studentId, string.Empty));
+                HttpResponseMessage response = await client.GetAsync(uri).ConfigureAwait(false);
+                response.EnsureSuccessStatusCode();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    Student = JsonSerializer.Deserialize<Student>(content, serializerOptions);
+                }
+                else
+                {
+
+                    Debug.WriteLine("Error fecthing students");
+                }
+                return Student;
+            }
+            catch (Exception e)
+            {
+                StatusMessage = $"{e.Message}";
+                Debug.WriteLine(StatusMessage);
+                return Student;
             }
 
         }

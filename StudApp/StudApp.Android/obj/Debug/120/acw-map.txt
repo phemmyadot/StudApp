@@ -1348,9 +1348,6 @@ androidx.recyclerview.widget.RecyclerView$SmoothScroller$ScrollVectorProvider;an
 AndroidX.Room.IAutoMigration, Xamarin.AndroidX.Room.Common;androidx.room.AutoMigration
 AndroidX.Room.IAutoMigration;androidx.room.AutoMigration
 androidx.room.AutoMigration;androidx.room.AutoMigration
-AndroidX.Room.IBuiltInTypeConverters, Xamarin.AndroidX.Room.Common;androidx.room.BuiltInTypeConverters
-AndroidX.Room.IBuiltInTypeConverters;androidx.room.BuiltInTypeConverters
-androidx.room.BuiltInTypeConverters;androidx.room.BuiltInTypeConverters
 AndroidX.Room.IColumnInfoCollate, Xamarin.AndroidX.Room.Common;androidx.room.ColumnInfo$Collate
 AndroidX.Room.IColumnInfoCollate;androidx.room.ColumnInfo$Collate
 androidx.room.ColumnInfo$Collate;androidx.room.ColumnInfo$Collate
@@ -1372,18 +1369,6 @@ androidx.room.DatabaseView;androidx.room.DatabaseView
 AndroidX.Room.IDelete, Xamarin.AndroidX.Room.Common;androidx.room.Delete
 AndroidX.Room.IDelete;androidx.room.Delete
 androidx.room.Delete;androidx.room.Delete
-AndroidX.Room.IDeleteColumnEntries, Xamarin.AndroidX.Room.Common;androidx.room.DeleteColumn$Entries
-AndroidX.Room.IDeleteColumnEntries;androidx.room.DeleteColumn$Entries
-androidx.room.DeleteColumn$Entries;androidx.room.DeleteColumn$Entries
-AndroidX.Room.IDeleteColumn, Xamarin.AndroidX.Room.Common;androidx.room.DeleteColumn
-AndroidX.Room.IDeleteColumn;androidx.room.DeleteColumn
-androidx.room.DeleteColumn;androidx.room.DeleteColumn
-AndroidX.Room.IDeleteTableEntries, Xamarin.AndroidX.Room.Common;androidx.room.DeleteTable$Entries
-AndroidX.Room.IDeleteTableEntries;androidx.room.DeleteTable$Entries
-androidx.room.DeleteTable$Entries;androidx.room.DeleteTable$Entries
-AndroidX.Room.IDeleteTable, Xamarin.AndroidX.Room.Common;androidx.room.DeleteTable
-AndroidX.Room.IDeleteTable;androidx.room.DeleteTable
-androidx.room.DeleteTable;androidx.room.DeleteTable
 AndroidX.Room.IEmbedded, Xamarin.AndroidX.Room.Common;androidx.room.Embedded
 AndroidX.Room.IEmbedded;androidx.room.Embedded
 androidx.room.Embedded;androidx.room.Embedded
@@ -1414,18 +1399,12 @@ androidx.room.Insert;androidx.room.Insert
 AndroidX.Room.IJunction, Xamarin.AndroidX.Room.Common;androidx.room.Junction
 AndroidX.Room.IJunction;androidx.room.Junction
 androidx.room.Junction;androidx.room.Junction
-AndroidX.Room.IMapInfo, Xamarin.AndroidX.Room.Common;androidx.room.MapInfo
-AndroidX.Room.IMapInfo;androidx.room.MapInfo
-androidx.room.MapInfo;androidx.room.MapInfo
 AndroidX.Room.IOnConflictStrategy, Xamarin.AndroidX.Room.Common;androidx.room.OnConflictStrategy
 AndroidX.Room.IOnConflictStrategy;androidx.room.OnConflictStrategy
 androidx.room.OnConflictStrategy;androidx.room.OnConflictStrategy
 AndroidX.Room.IPrimaryKey, Xamarin.AndroidX.Room.Common;androidx.room.PrimaryKey
 AndroidX.Room.IPrimaryKey;androidx.room.PrimaryKey
 androidx.room.PrimaryKey;androidx.room.PrimaryKey
-AndroidX.Room.IProvidedAutoMigrationSpec, Xamarin.AndroidX.Room.Common;androidx.room.ProvidedAutoMigrationSpec
-AndroidX.Room.IProvidedAutoMigrationSpec;androidx.room.ProvidedAutoMigrationSpec
-androidx.room.ProvidedAutoMigrationSpec;androidx.room.ProvidedAutoMigrationSpec
 AndroidX.Room.IProvidedTypeConverter, Xamarin.AndroidX.Room.Common;androidx.room.ProvidedTypeConverter
 AndroidX.Room.IProvidedTypeConverter;androidx.room.ProvidedTypeConverter
 androidx.room.ProvidedTypeConverter;androidx.room.ProvidedTypeConverter
@@ -1438,18 +1417,6 @@ androidx.room.RawQuery;androidx.room.RawQuery
 AndroidX.Room.IRelation, Xamarin.AndroidX.Room.Common;androidx.room.Relation
 AndroidX.Room.IRelation;androidx.room.Relation
 androidx.room.Relation;androidx.room.Relation
-AndroidX.Room.IRenameColumnEntries, Xamarin.AndroidX.Room.Common;androidx.room.RenameColumn$Entries
-AndroidX.Room.IRenameColumnEntries;androidx.room.RenameColumn$Entries
-androidx.room.RenameColumn$Entries;androidx.room.RenameColumn$Entries
-AndroidX.Room.IRenameColumn, Xamarin.AndroidX.Room.Common;androidx.room.RenameColumn
-AndroidX.Room.IRenameColumn;androidx.room.RenameColumn
-androidx.room.RenameColumn;androidx.room.RenameColumn
-AndroidX.Room.IRenameTableEntries, Xamarin.AndroidX.Room.Common;androidx.room.RenameTable$Entries
-AndroidX.Room.IRenameTableEntries;androidx.room.RenameTable$Entries
-androidx.room.RenameTable$Entries;androidx.room.RenameTable$Entries
-AndroidX.Room.IRenameTable, Xamarin.AndroidX.Room.Common;androidx.room.RenameTable
-AndroidX.Room.IRenameTable;androidx.room.RenameTable
-androidx.room.RenameTable;androidx.room.RenameTable
 AndroidX.Room.IRewriteQueriesToDropUnusedColumns, Xamarin.AndroidX.Room.Common;androidx.room.RewriteQueriesToDropUnusedColumns
 AndroidX.Room.IRewriteQueriesToDropUnusedColumns;androidx.room.RewriteQueriesToDropUnusedColumns
 androidx.room.RewriteQueriesToDropUnusedColumns;androidx.room.RewriteQueriesToDropUnusedColumns
@@ -1480,9 +1447,9 @@ androidx.room.IMultiInstanceInvalidationService;androidx.room.IMultiInstanceInva
 AndroidX.Room.RoomDatabase+IQueryCallback, Xamarin.AndroidX.Room.Runtime;androidx.room.RoomDatabase$QueryCallback
 AndroidX.Room.RoomDatabase.IQueryCallback;androidx.room.RoomDatabase$QueryCallback
 androidx.room.RoomDatabase$QueryCallback;androidx.room.RoomDatabase$QueryCallback
-AndroidX.Room.Migration.IAutoMigrationSpec, Xamarin.AndroidX.Room.Runtime;androidx.room.migration.AutoMigrationSpec
-AndroidX.Room.Migration.IAutoMigrationSpec;androidx.room.migration.AutoMigrationSpec
-androidx.room.migration.AutoMigrationSpec;androidx.room.migration.AutoMigrationSpec
+AndroidX.Room.Migration.IAutoMigrationCallback, Xamarin.AndroidX.Room.Runtime;androidx.room.migration.AutoMigrationCallback
+AndroidX.Room.Migration.IAutoMigrationCallback;androidx.room.migration.AutoMigrationCallback
+androidx.room.migration.AutoMigrationCallback;androidx.room.migration.AutoMigrationCallback
 AndroidX.SavedState.ISavedStateRegistryOwner, Xamarin.AndroidX.SavedState;androidx.savedstate.SavedStateRegistryOwner
 AndroidX.SavedState.ISavedStateRegistryOwner;androidx.savedstate.SavedStateRegistryOwner
 androidx.savedstate.SavedStateRegistryOwner;androidx.savedstate.SavedStateRegistryOwner

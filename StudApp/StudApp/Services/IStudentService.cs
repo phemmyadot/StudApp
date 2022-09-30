@@ -9,7 +9,12 @@ namespace StudApp.Services
         Task<List<Student>> GetAllStudents();
 
         Task AddNewStudent(Student student);
+
+        Task UpdateStudent(Student student);
+
         Task DeleteStudent(string studentId);
+
+        Task<Student> GetStudent(string studentId);
 
     }
 }

@@ -48,7 +48,7 @@ namespace StudApp.PageModels
 
 
 
-        private void LoadItems()
+        private void LoadStudents()
         {
             Students.Clear();
             Task<List<Student>> getStudents = _service.GetAllStudents();
@@ -60,9 +60,6 @@ namespace StudApp.PageModels
             }
         }
 
-
-
-
         public override void Init(object initData)
         {
             base.Init(initData);
@@ -70,11 +67,11 @@ namespace StudApp.PageModels
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            LoadItems();
+            LoadStudents();
         }
         public override void ReverseInit(object returnedData)
         {
-            LoadItems();
+            LoadStudents();
             base.ReverseInit(returnedData);
         }
 
@@ -95,10 +92,9 @@ namespace StudApp.PageModels
             get
             {
 
-                return new Command(() =>
+                return new Command(async() =>
                 {
-
-
+                    await CoreMethods.PushPageModel<NewStudentPageModel>(pm => pm.StudentId = SelectedStudent.id);
                 });
             }
         }
@@ -115,7 +111,7 @@ namespace StudApp.PageModels
                     {
                         await _service.DeleteStudent(SelectedStudent.id);
                         SelectedStudent = null;
-                        LoadItems();
+                        LoadStudents();
                     }
                 });
             }
