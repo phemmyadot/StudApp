@@ -73,8 +73,15 @@ namespace StudApp.PageModels
                     authenticator.IsLoadableRedirectUri = true;
                     AuthenticationState.Authenticator = authenticator;
 
-                    OAuthLoginPresenter presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
-                    presenter.Login(authenticator);
+                    try
+                    {
+                        OAuthLoginPresenter presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
+                        presenter.Login(authenticator);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.Write(e.Message);
+                    }
                 });
             }
         }
