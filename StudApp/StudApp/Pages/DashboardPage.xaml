@@ -2,11 +2,18 @@
     x:Class="StudApp.Pages.DashboardPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
     xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshMvvm"
+    xmlns:local="clr-namespace:Syncfusion.ListView.XForms.Helpers;assembly=Syncfusion.SfListView.XForms"
     xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     Title="Dashboard"
     BackgroundColor="{StaticResource PageBackgroundColor}"
     NavigationPage.HasBackButton="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseBoolConverter x:Key="inverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <fresh:FreshBaseContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding OnLogout}" Text="Logout" />
         <ToolbarItem Text="" />
@@ -38,54 +45,72 @@
                     TextChanged="OnFilterTextChanged"
                     TextColor="{StaticResource PrimaryTextColor}" />
             </Frame>
+
             <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="20" />
-                </Grid.ColumnDefinitions>
-                <Button
-                    x:Name="editButton"
-                    Grid.Column="1"
-                    Command="{Binding EditStudent}"
-                    HorizontalOptions="FillAndExpand"
-                    IsEnabled="{Binding IsEnabled}"
-                    Style="{StaticResource PrimaryButtonStyle}"
-                    Text="Edit"
-                    VerticalOptions="Center" />
-                <Button
-                    x:Name="deleteButton"
-                    Grid.Row="0"
-                    Grid.Column="2"
-                    Command="{Binding DeleteStudent}"
-                    HorizontalOptions="FillAndExpand"
-                    IsEnabled="{Binding IsEnabled}"
-                    Style="{StaticResource PrimaryButtonStyle}"
-                    Text="Delete"
-                    VerticalOptions="Center" />
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        x:Name="addButton"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="30,0,0,0"
+                        Command="{Binding onClickAdd}"
+                        HorizontalOptions="FillAndExpand"
+                        Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Add"
+                        VerticalOptions="Center" />
+
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="20" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        x:Name="editButton"
+                        Grid.Column="1"
+                        Command="{Binding EditStudent}"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled}"
+                        Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Edit"
+                        VerticalOptions="Center" />
+                    <Button
+                        x:Name="deleteButton"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Command="{Binding DeleteStudent}"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled}"
+                        Style="{StaticResource PrimaryButtonStyle}"
+                        Text="Delete"
+                        VerticalOptions="Center" />
+                </Grid>
             </Grid>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Button
-                    x:Name="addButton"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Margin="30,0,0,0"
-                    Command="{Binding onClickAdd}"
-                    HorizontalOptions="FillAndExpand"
-                    Style="{StaticResource PrimaryButtonStyle}"
-                    Text="Add"
-                    VerticalOptions="Center" />
-            </Grid>
+            <Frame
+                Grid.Row="2"
+                BackgroundColor="Transparent"
+                IsVisible="{Binding IsLoading}">
+                <busyindicator:SfBusyIndicator
+                    x:Name="busyindicator"
+                    Title="Loading..."
+                    AnimationType="Ball"
+                    TextColor="{StaticResource PrimaryColor}"
+                    TitlePlacement="None"
+                    ViewBoxHeight="150"
+                    ViewBoxWidth="150" />
+            </Frame>
             <syncfusion:SfListView
                 x:Name="listView"
                 Grid.Row="2"
                 Margin="10"
                 AutoFitMode="Height"
+                IsVisible="{Binding IsLoading, Converter={StaticResource inverter}}"
                 ItemSpacing="1"
                 ItemsSource="{Binding Students}"
                 SelectedItem="{Binding SelectedStudent}"

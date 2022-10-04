@@ -17,7 +17,18 @@ namespace StudApp.PageModels
         public bool _isEnabled = false;
 
         public ObservableCollection<Student> Students { get; private set; }
+        private bool _isLoading = false;
 
+        public bool IsLoading
+        {
+            get { return _isLoading; }
+            set
+            {
+                _isLoading = value;
+                this.RaisePropertyChanged();
+
+            }
+        }
         public Student SelectedStudent
         {
             get { return _selectedStudent; }
@@ -94,8 +105,10 @@ namespace StudApp.PageModels
 
                 return new Command(async () =>
                 {
+                    IsLoading = true;
                     await SecureStorage.SetAsync("token", "");
                     await CoreMethods.PushPageModel<LoginPageModel>();
+                    IsLoading = false;
                 });
             }
         }
@@ -105,9 +118,11 @@ namespace StudApp.PageModels
             get
             {
 
-                return new Command(async() =>
+                return new Command(async () =>
                 {
+                    IsLoading = true;
                     await CoreMethods.PushPageModel<NewStudentPageModel>(pm => pm.StudentId = SelectedStudent.id);
+                    IsLoading = false;
                 });
             }
         }
@@ -119,6 +134,7 @@ namespace StudApp.PageModels
                 return new Command(async () =>
                 {
 
+                    IsLoading = true;
                     bool accepted = await Application.Current.MainPage.DisplayAlert("Alert", "Are you sure you want to delete?", "Yes", "Cancel");
                     if (accepted)
                     {
@@ -126,6 +142,7 @@ namespace StudApp.PageModels
                         SelectedStudent = null;
                         LoadStudents();
                     }
+                    IsLoading = false;
                 });
             }
         }
