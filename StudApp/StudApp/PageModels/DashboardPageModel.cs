@@ -17,7 +17,7 @@ namespace StudApp.PageModels
         public bool _isEnabled = false;
 
         public ObservableCollection<Student> Students { get; private set; }
-        private bool _isLoading = false;
+        private bool _isLoading = true;
 
         public bool IsLoading
         {
@@ -65,11 +65,13 @@ namespace StudApp.PageModels
             Students.Clear();
             Task<List<Student>> getStudents = _service.GetAllStudents();
             getStudents.Wait();
+
             foreach (var student in getStudents.Result)
             {
                 Students.Add(student);
                 Console.Write(student.firstName + student.lastName);
             }
+            IsLoading = false;
         }
 
         public override void Init(object initData)
